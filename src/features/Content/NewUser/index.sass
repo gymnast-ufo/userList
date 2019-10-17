@@ -1,0 +1,28 @@
+@import ../../../common/constants/index
+
+.new-user
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+	position: sticky
+	bottom: 0
+	padding: 15px
+	background-color: $color-light-green
+	cursor: pointer
+
+	&__text
+		text-transform: uppercase
+
+		&:before
+			content: '+'
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			height: 2.2rem
+			width: 2.2rem
+			margin-right: 10px
+			border: 2px solid currentColor
+			border-radius: 50%
+			color: darken($color-light-green, 35%)
+			font-weight: 600

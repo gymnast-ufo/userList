@@ -1,0 +1,22 @@
+@import ../../../common/constants/index
+
+.users-list
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 15px
+  justify-items: stretch
+
+  @media (min-width: $tablet-width)
+    grid-gap: 20px
+
+  &__item
+    display: grid
+    grid-template-areas: 'id' 'name' 'role' 'phone' 'isArchive'
+    justify-content: stretch
+    padding: 10px
+    background-color: darken($color-light-blue, 8%)
+    cursor: pointer
+
+    @media (min-width: $tablet-width)
+      grid-template-areas:  'id .' 'name role' 'phone .' '. isArchive'
+      justify-content: space-between

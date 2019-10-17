@@ -1,0 +1,29 @@
+@import ../../common/constants/index
+
+.popup
+  display: none
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  padding: 7vmin
+  background-color: rgba(0, 0, 0, 0.7)
+
+  &__visible
+  	display: flex
+  
+  &__close
+    position: absolute
+    top: 15px
+    right: 15px
+
+    @media (min-width: $tablet-width)
+      top: 25px
+      right: 25px
+
+  &__item
+    background-color: #ffffff

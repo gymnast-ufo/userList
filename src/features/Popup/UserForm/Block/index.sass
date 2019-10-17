@@ -1,0 +1,32 @@
+@import ../../../../common/constants/index
+
+.field-block
+	display: grid
+	grid-template-areas: 'label' 'field' 'error'
+	grid-gap: 10px
+	align-items: center
+
+	@media (min-width: $tablet-width)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: 'label field' '. error'
+		grid-gap: 0px
+
+	&__field
+		grid-area: field
+		padding: 5px 10px
+		border-width: 1px
+		border-style: solid
+		border-color: currentColor
+		color: currentColor
+
+	&__label
+		grid-area: label
+		font-size: 0.8rem
+		color: currentColor
+
+	&__error
+		grid-area: error
+		display: inline-flex
+		transition: max-height 0.3s ease-out
+		font-size: 0.8rem
+		overflow: hidden

@@ -1,0 +1,17 @@
+@import ../../common/constants/index
+
+.filters
+  display: grid
+  align-self: start
+  position: sticky
+  top: 0
+
+  &__item
+  	margin-bottom: 15px
+
+		@media(min-width: $tablet-width)
+			margin-bottom: 20px
+
+  &__search
+  	padding: 7px 10px 5px
+  	border: none

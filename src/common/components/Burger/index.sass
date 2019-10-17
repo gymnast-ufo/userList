@@ -1,0 +1,43 @@
+.burger
+	display: inline-block
+	position: relative
+	width: 24px
+	height: 24px
+	cursor: pointer
+	overflow: hidden
+
+	&__inner,
+	&:before,
+	&:after
+		display: inline-block
+		position: absolute
+		left: 2px
+		width: calc(100% - 4px)
+		height: 4px
+		border-radius: 4px
+		background-color: #ffffff
+		transition: all 0.3s ease-out
+
+	&__inner
+		top: 50%
+		transform: translateY(-50%)
+
+	&:before,
+	&:after
+		content: ''
+		transform-origin: 0 50%
+
+	&:before
+		top: 3px
+
+	&:after
+		bottom: 3px
+
+	&--open &__inner
+		opacity: 0
+
+	&--open:before
+		transform: translateX(4px) rotateZ(45deg)
+
+	&--open:after
+		transform: translateX(4px) rotateZ(-45deg)

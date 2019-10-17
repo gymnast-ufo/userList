@@ -1,0 +1,35 @@
+@import ../../common/constants/index
+
+.main
+  display: grid
+  grid-template-rows: repeat(2, auto)
+  grid-template-columns: auto
+  grid-gap: 15px
+  justify-items: stretch
+  padding-top: 5vmin
+  padding-bottom: 5vmin
+
+  @media (min-width: $tablet-width)
+    grid-template-columns: 1fr 2fr
+    grid-template-rows: auto
+    grid-gap: 30px
+    padding-top: 7vmin
+    padding-bottom: 7vmin
+
+  @media (min-width: $desktop-width)
+    max-width: 1280px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 10vmin
+    padding-bottom: 10vmin
+
+  &__element
+    padding: 20px 0
+    background-color: $color-light-blue
+
+    @media (min-width: $tablet-width)
+      padding: 30px 20px
+
+  &__filters
+
+  &__content

@@ -1,0 +1,19 @@
+@import ../../../common/constants/index
+
+.user-form
+	display: grid
+	grid-template-columns: 1fr
+	grid-gap: 20px
+	position: relative
+	padding: 25px
+	max-width: 900px
+	overflow: hidden
+
+	@media (min-width: $tablet-width)
+		grid-gap: 30px
+
+	&__block
+
+	&__send
+		display: grid
+		justify-items: end

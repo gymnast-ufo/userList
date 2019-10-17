@@ -1,0 +1,28 @@
+@import ../../../../common/constants/index
+
+.item
+  display: flex
+  flex-flow: row wrap
+  position: relative
+
+  &__prop
+    padding: 5px 0
+
+  &__pseudo-check
+
+  &__label
+
+    &-bold
+      font-size: 1.4em
+      font-weight: 600
+
+  &__role
+    text-transform: uppercase
+
+  &__isArchive
+    @media (min-width: $tablet-width)
+      justify-self: end
+
+  @each $prop in ( id, name, role, phone, isArchive )
+    &__#{$prop}
+      grid-area: #{$prop}
